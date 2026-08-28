@@ -148,8 +148,6 @@ Each rule works together to guarantee that only clean, safe, and complete data r
 └─────────────────────────────┘
 ```
 
-*(Recreate this as a proper visual ERD using Draw.io, Lucidchart, or Figma, and save it as `documentation/erd.png`.)*
-
 ### Table Structure
 
 | Column | Data Type | Constraints |
@@ -222,8 +220,6 @@ Each rule works together to guarantee that only clean, safe, and complete data r
         │      Page             │
         └─────────────────┘
 ```
-
-*(Recreate this flowchart visually using Draw.io, Lucidchart, Figma, or Canva and save it as `documentation/flowchart.png`.)*
 
 ---
 
