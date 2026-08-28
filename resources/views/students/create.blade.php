@@ -15,6 +15,119 @@
 
     <div class="max-w-5xl mx-auto">
 
+        ```blade
+        {{-- Flash Messages --}}
+
+        @if (session('success'))
+            <div
+                class="mb-6 flex items-center gap-3
+                bg-green-50 border border-green-200
+                text-green-700 px-5 py-4 rounded-xl
+                shadow-sm">
+
+                <div
+                    class="w-9 h-9 bg-green-100 rounded-lg
+                    flex items-center justify-center shrink-0">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+
+                </div>
+
+                <div>
+                    <p class="font-semibold">
+                        Success
+                    </p>
+
+                    <p class="text-sm">
+                        {{ session('success') }}
+                    </p>
+                </div>
+
+            </div>
+        @endif
+
+
+        @if (session('error'))
+            <div
+                class="mb-6 flex items-center gap-3
+                bg-red-50 border border-red-200
+                text-red-700 px-5 py-4 rounded-xl
+                shadow-sm">
+
+                <div
+                    class="w-9 h-9 bg-red-100 rounded-lg
+                    flex items-center justify-center shrink-0">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+
+                </div>
+
+                <div>
+                    <p class="font-semibold">
+                        Error
+                    </p>
+
+                    <p class="text-sm">
+                        {{ session('error') }}
+                    </p>
+                </div>
+
+            </div>
+        @endif
+
+
+        @if ($errors->any())
+
+            <div
+                class="mb-6 bg-red-50 border border-red-200
+                text-red-700 px-5 py-4 rounded-xl shadow-sm">
+
+                <div class="flex items-start gap-3">
+
+                    <div
+                        class="w-9 h-9 bg-red-100 rounded-lg
+                        flex items-center justify-center shrink-0">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 9v2m0 4h.01M10.29 3.86l-8.82 15a2 2 0 001.71 3h17.64a2 2 0 001.71-3l-8.82-15a2 2 0 00-3.42 0z" />
+                        </svg>
+
+                    </div>
+
+                    <div>
+
+                        <p class="font-semibold">
+                            Please check the following errors:
+                        </p>
+
+                        <ul class="mt-2 text-sm list-disc list-inside space-y-1">
+
+                            @foreach ($errors->all() as $error)
+                                <li>
+                                    {{ $error }}
+                                </li>
+                            @endforeach
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        @endif
+        ```
+
+
         {{-- Page Header --}}
         <div class="text-center mb-8">
             <div class="inline-flex items-center justify-center w-14 h-14 bg-blue-600 rounded-2xl shadow-lg mb-4">
