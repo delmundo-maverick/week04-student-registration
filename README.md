@@ -300,5 +300,3 @@ Oracle Corporation. (n.d.). *MySQL 8.0 reference manual*. MySQL. https://dev.mys
 Tailwind Labs. (n.d.). *Tailwind CSS documentation*. Tailwind CSS. https://tailwindcss.com/docs
 
 Mozilla. (n.d.). *MDN Web Docs*. Mozilla Developer Network. https://developer.mozilla.org/
-
----
